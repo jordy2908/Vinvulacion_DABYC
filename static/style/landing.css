@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -79,7 +77,7 @@ header.sticky .nav > ul > li.donate {
     color:azure;
     letter-spacing: 2px;
     text-decoration: none;
-    transition: 0.3s linear;
+    transition: 0.3s;
 }
 
 .nav > ul > li > a.donate {
@@ -101,6 +99,8 @@ header.sticky .nav > ul > li.donate {
 
 header.sticky .nav-container{
     background-color: #003B46;
+    /*border-bottom-left-radius: 20px;*/
+    border-radius: 0 0 40px 14px;
 }
 
 header.sticky ul li a {
@@ -116,12 +116,17 @@ header.sticky ul li a.donate:hover {
     color: rgb(131, 24, 7);
 }
 
+/* SECTION FONT */
+
+section {
+    font-family: 'PT Sans', sans-serif;
+}
 
 /* FRONT PAGE */
 
 .bg{
     height: 100vh;
-    background: url('https://scontent.fgye19-1.fna.fbcdn.net/v/t39.30808-6/297826014_2954553668170344_7075249188218304430_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeHfS96Hcd_wxAepU-1SXFg4fANLtQYNuHt8A0u1Bg24e1Iv89VhQtaAheYWv11kqzln7A92yoqQw3ERMt8b3elV&_nc_ohc=faZnkJr8RjMAX96Rw2M&_nc_ht=scontent.fgye19-1.fna&oh=00_AT-iKFMTNRL_7cWjWmZL77G1Vbi1XpSVD1pwTOU6cqNS5Q&oe=630B695B');
+    background: url('https://scontent.fgye19-1.fna.fbcdn.net/v/t39.30808-6/297826014_2954553668170344_7075249188218304430_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeHfS96Hcd_wxAepU-1SXFg4fANLtQYNuHt8A0u1Bg24e1Iv89VhQtaAheYWv11kqzln7A92yoqQw3ERMt8b3elV&_nc_ohc=eTJFH6DDLDUAX_r4jJ9&_nc_ht=scontent.fgye19-1.fna&oh=00_AT86_LTxDwtTHzxbyNckdt_XJ2Uq6Q7A3HFojCM5NwYJdQ&oe=6313525B');
     position: relative;
     width: 100%;
     background-size: cover;
@@ -141,6 +146,8 @@ header.sticky ul li a.donate:hover {
     flex-direction: column;
     font-family: 'PT Sans', sans-serif;
     font-size: 100%;
+    padding-bottom: 10px;
+    transition: ease-in 0.3;
 }
 
     /* SEPARATOR */
@@ -148,9 +155,10 @@ header.sticky ul li a.donate:hover {
     .container-separator {
         display: flex;
         flex-direction: row;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        margin: 50px 0 0;
+        margin: 50px 0 20px;
         font-size: 30px;
     }
 
@@ -169,6 +177,15 @@ header.sticky ul li a.donate:hover {
     display: flex;
     align-items: center;
     padding: 25px;
+    margin: 5px 10px 5px 10px;
+    transition: all 0.3;
+    border-radius: 5px;
+    background: linear-gradient(250deg, #66a5ad66, rgba(255, 255, 255, 0));
+}
+
+.container-about:nth-child(3) {
+    background: linear-gradient(90deg, #66a5ad69, rgba(255, 255, 255, 0));
+
 }
 
 .text-about {
@@ -176,39 +193,49 @@ header.sticky ul li a.donate:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 55%;
+    width: 130%;
     height: 40vh;
     padding-inline: 30px;
+    transition: all 0.3;
 
 }
 
 .img-about {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     padding: 30px;
+    transition: all 0.3;
+
 }
 
 .img-about > img {
     margin-left: 10px;
-    width: 40%;
+    width: 80%;
     rotate: 5deg;
+    transition: all 0.3;
+    box-shadow: #003B46 0 5px 5px 1px;
+    border-radius: 5px;
 }
 
 .title {
     text-align: center;
     padding: 10px;
+    transition: all 0.3;
+
 }
 
 .text {
     margin-top: 20px;
     text-align: justify;
+    transition: all 0.3;
+
 }
 
 /* ABOUT - MISION */
 
 .img-about:nth-child(1) {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     padding: 30px;
 }
 
@@ -216,6 +243,53 @@ header.sticky ul li a.donate:hover {
     rotate: -5deg;
 }
 
+/* SECTION DONACIONES */
+
+.donate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate > .donate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 25px;
+    width: 100%;
+
+}
+
+.voluntad {
+    width: 100%;
+    margin: 25px;
+    text-align: end;
+}
+
+.kit {
+    width: 100%;
+    margin: 25px;
+    text-align: start;
+}
+
+button {
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 15px;
+    border-color: transparent;
+    cursor: pointer;
+    background-color: #7eb3ba;
+    font-size: 100%;
+    color: #ffffff;
+    transition: all .2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #568a91;
+}
 
 /* RESPONSIVE */
 
@@ -243,56 +317,116 @@ header.sticky ul li a.donate:hover {
         display: none;
     }
 
+    header.sticky .nav-container{
+        background-color: #003B46;
+        /*border-bottom-left-radius: 20px;*/
+        border-radius: 0 0 40px 9%;
+    }    
+
     .text-about {
-        height: 100vh;   
+        height: 100vh;  
+        transition: all 0.3; 
+    }
+
+    .container-about {
+        border-radius: 15px;
+        background-color: #66A5AD;
+        box-shadow: #003B46 0 5px 5px;
+        transition: all 0.3s;
+        border-style: none;
+        background: linear-gradient(90deg, #66a5ad69, rgba(255, 255, 255, 0));
+
     }
 
     .container-about:nth-child(3) {
         flex-flow : column-reverse;
+        transition: all 0.3;
     }
 
     .img-about:nth-child(1){
         justify-content: center;
+        transition: all 0.3;
     }
 
     .img-about {
         width: 100%;
         padding: 30px;
         justify-content: center;
+        transition: all 0.3;
     }
 
     .img-about > img {
         width: 100%;
+        box-shadow: #003B46 0 5px 5px 1px;
+        border-radius: 5px;
+        transition: all 0.3;
     }
 
 }
 
 @media screen and (max-width: 980px ) {
+
+    .text-separator {
+        font-size: 125%;
+    }
+
     .container-about {
         flex-direction: column;
+        transition: all 0.3;
+    }
+
+    .container-about {
+        border-radius: 15px;
+        background-color: #66A5AD;
+        box-shadow: #003B46 0 5px 5px;
+        transition: all 0.3s;
+        border-style: none;
+        background: linear-gradient(90deg, #66a5ad69, rgba(255, 255, 255, 0));
+
     }
 
     .nav > ul > li > a {
         padding: 0.3rem;
+        transition: all 0.3;
     }
 
     .nav > ul > li.contact {
         display: none;
+        transition: all 0.3;
     }
 
     .text-about {
         width: 100%;
         height: 70%;
         padding-inline: 30px;
+        transition: all 0.3;
     }
 
     .img-about {
         width: 100%;
         padding: 30px;
         justify-content: center;
+        transition: all 0.3;
     }
 
     .img-about > img {
         width: 50%;
+        transition: all 0.3;
     }
+
+    button {
+        width: 100%;
+    }
+
+    .voluntad {
+        width: 100%;
+        margin: 10px;
+        text-align: end;
+    }
+    
+    .kit {
+        width: 100%;
+        margin: 10px;
+        text-align: start;
+    }    
 }
